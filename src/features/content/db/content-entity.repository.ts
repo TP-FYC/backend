@@ -36,7 +36,7 @@ export class ContentEntityRepository
     return this.manager
       .createQueryBuilder(Content, 'content')
       .select(
-        'usc.description, user.principal_picture_url, user.firstname, user.lastname, program.stdin, program.stdout, content.*',
+        'user.principal_picture_url, user.firstname, user.lastname, program.stdin, program.stdout, content.*',
       )
       .innerJoin(User, 'user', 'user.id = content.creator_id')
       .leftJoin(Program, 'program', 'program.id = content.program_id')
@@ -48,7 +48,7 @@ export class ContentEntityRepository
     return this.manager
       .createQueryBuilder(Content, 'content')
       .select(
-        'usc.description, user.principal_picture_url, user.firstname, user.lastname, program.stdin, program.stdout, content.*',
+        'user.principal_picture_url, user.firstname, user.lastname, program.stdin, program.stdout, content.*',
       )
       .innerJoin(User, 'user', 'user.id = content.creator_id')
       .leftJoin(Program, 'program', 'program.id = content.program_id')
@@ -61,7 +61,7 @@ export class ContentEntityRepository
     return this.manager
       .createQueryBuilder(Content, 'content')
       .select(
-        'usc.description, user.principal_picture_url, user.firstname, user.lastname, program.stdin, program.stdout, content.*',
+        'user.principal_picture_url, user.firstname, user.lastname, program.stdin, program.stdout, content.*',
       )
       .innerJoin(User, 'user', 'user.id = content.creator_id')
       .leftJoin(Program, 'program', 'program.id = content.program_id')
@@ -78,7 +78,7 @@ export class ContentEntityRepository
     return this.manager
       .createQueryBuilder(Content, 'content')
       .select(
-        'usc.description, user.principal_picture_url, user.firstname, user.lastname, program.stdin, program.stdout, content.*',
+        'user.principal_picture_url, user.firstname, user.lastname, program.stdin, program.stdout, content.*',
       )
       .innerJoin(User, 'user', 'user.id = content.creator_id')
       .innerJoin(Follow, 'follow', 'follow.user_id = user.id')
