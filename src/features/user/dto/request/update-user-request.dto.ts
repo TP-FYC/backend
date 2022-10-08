@@ -17,6 +17,4 @@ export class UpdateUserRequest {
   public readonly userRole: Role;
   @ApiProperty()
   public readonly confidentiality: Confidentiality;
-  @ApiProperty()
-  public readonly principalPictureURL: string;
 }

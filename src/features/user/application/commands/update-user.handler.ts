@@ -22,7 +22,6 @@ export class UpdateUserHandler implements ICommandHandler<UpdateUserCommand> {
     user.description = command.description;
     user.user_role = command.userRole;
     user.confidentiality = command.confidentiality;
-    user.principal_picture_url = command.principalPictureURL;
     await this.repository.updateUser(user);
 
     return await this.repository.findById(user.id);

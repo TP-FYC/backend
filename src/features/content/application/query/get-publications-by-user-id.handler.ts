@@ -37,7 +37,6 @@ export class GetPublicationsByUserIdHandler
         publication.content_type,
         publication.created_at,
         publication.parent_id,
-        publication.principal_picture_url,
         `${publication.firstname} ${publication.lastname}`,
         await this.userReactToContentRepository.countLike(publication.id),
         await this.userReactToContentRepository.countDislike(publication.id),

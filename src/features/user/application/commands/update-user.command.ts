@@ -9,7 +9,6 @@ export class UpdateUserCommand {
   public readonly description: string;
   public readonly userRole: Role;
   public readonly confidentiality: Confidentiality;
-  public readonly principalPictureURL: string;
 
   private constructor(
     userId: string,
@@ -18,7 +17,6 @@ export class UpdateUserCommand {
     description: string,
     userRole: Role,
     confidentiality: Confidentiality,
-    principalPictureURL: string,
   ) {
     this.userId = userId;
     this.password = password;
@@ -26,7 +24,6 @@ export class UpdateUserCommand {
     this.description = description;
     this.userRole = userRole;
     this.confidentiality = confidentiality;
-    this.principalPictureURL = principalPictureURL;
   }
   public static of(updateUserRequest: UpdateUserRequest): UpdateUserCommand {
     const {
@@ -36,7 +33,6 @@ export class UpdateUserCommand {
       description,
       userRole,
       confidentiality,
-      principalPictureURL,
     } = updateUserRequest;
     return new UpdateUserCommand(
       userId,
@@ -45,7 +41,6 @@ export class UpdateUserCommand {
       description,
       userRole,
       confidentiality,
-      principalPictureURL,
     );
   }
 }

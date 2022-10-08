@@ -7,7 +7,6 @@ export class PubicationResponse {
   readonly createdAt: Date;
   readonly creatorId: string;
   readonly parentId: string;
-  readonly userImage: string;
   readonly username: string;
   readonly numberOfLikes: number;
   readonly numberOfDislikes: number;
@@ -24,7 +23,6 @@ export class PubicationResponse {
     contentType: string,
     createdAt: Date,
     parentId: string,
-    userImage: string,
     username: string,
     numberOfLikes: number,
     numberOfDislikes: number,
@@ -40,7 +38,6 @@ export class PubicationResponse {
     this.contentType = contentType;
     this.createdAt = createdAt;
     this.parentId = parentId;
-    this.userImage = userImage;
     this.username = username;
     this.numberOfLikes = numberOfLikes;
     this.numberOfDislikes = numberOfDislikes;

@@ -35,7 +35,6 @@ export class GetContentByIdHandler
       content.content_type,
       content.created_at,
       content.parent_id,
-      content.principal_picture_url,
       `${content.firstname} ${content.lastname}`,
       await this.userReactToContentRepository.countLike(content.id),
       await this.userReactToContentRepository.countDislike(content.id),

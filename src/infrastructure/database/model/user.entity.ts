@@ -40,7 +40,4 @@ export class User {
     default: Confidentiality.PUBLIC,
   })
   confidentiality: Confidentiality;
-
-  @Column({ nullable: true })
-  principal_picture_url: string;
 }
