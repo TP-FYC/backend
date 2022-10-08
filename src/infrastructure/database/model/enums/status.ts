@@ -1,0 +1,5 @@
+export enum Status {
+  PENDING_INVIT = 'PENDING_INVIT',
+  ACCEPTED = 'ACCEPTED',
+  REFUSED = 'REFUSED',
+}
